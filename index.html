@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini Checkout</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><div class="brand"><span class="brand-mark" aria-hidden="true">✳</span> THE LITTLE STORE</div><p class="eyebrow">YOUR ORDER</p><h1>Checkout<span class="heading-dot">.</span></h1><p>Almost there. Review your items and make them yours.</p></header>
+    <section aria-labelledby="cart-heading">
+      <div class="section-heading"><div><p class="section-kicker">01 / YOUR SELECTION</p><h2 id="cart-heading">Your cart</h2></div><span class="section-icon" aria-hidden="true">↗</span></div>
+      <div id="products"></div>
+      <div class="total"><strong>Order total</strong><strong id="total">$0.00</strong></div>
+    </section>
+    <section aria-labelledby="details-heading">
+      <div class="section-heading"><div><p class="section-kicker">02 / ONE LAST THING</p><h2 id="details-heading">Your details</h2></div></div>
+      <form id="checkout" novalidate>
+        <label for="customer-name">Name <span aria-hidden="true">*</span></label>
+        <input id="customer-name" name="name" autocomplete="name" required aria-describedby="name-error">
+        <p id="name-error" class="error" hidden>Please enter your name.</p>
+        <p id="cart-error" class="error" role="alert" hidden>Your cart is empty. Add an item before placing your order.</p>
+        <button id="place-order" type="submit">Place order <span aria-hidden="true">→</span></button>
+      </form>
+      <div id="confirmation" class="confirmation" role="status" tabindex="-1" hidden></div>
+    </section>
+  </main>
+</body>
+</html>
